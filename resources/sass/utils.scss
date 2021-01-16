@@ -1,0 +1,2370 @@
+@import './app.scss';
+
+html {
+  width: 100%;
+  // overflow-x: hidden;
+  @media (max-width: 768px) {
+    html,body {
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden;
+      &>.container, &>.footer {
+        max-width: 100vw;
+        margin: 0;
+      }
+    }
+    header {
+      overflow: unset !important;
+      .container {
+        background-color: #fff;
+      }
+      .nav {
+        height: auto;
+      }
+    }
+    .navbar {
+      z-index: 999;
+    }
+    .container-news {
+      &__left {
+        .title {
+          img {
+            display: none;
+          }
+        }
+      }
+    }
+    .footer {
+      .container {
+        &-link {
+          display: none;
+        }
+        &-banquan {
+          div {
+            display: none;
+          }
+        }
+      }
+    }
+    .container-news {
+      margin-top: 10px !important;
+      &__left {
+        &--box {
+          img {
+            width: 130px !important;
+            height: 65px !important;
+          }
+          .da {
+            display: none !important;
+            &+div {
+              margin-top: 10px;
+            }
+          }
+          
+          h4 {
+            height: auto !important;
+            -webkit-line-clamp: 2 !important;
+            font-size: 16px !important;
+            font-weight: 400 !important;
+            &::before {
+              display: none;
+              font-size: 13px !important;
+            }
+          }
+        }
+      }
+    }
+    .tool-nav {
+      width: 100vw;
+      text-align: center;
+      border-top: 1px solid #32394d;
+      padding-top: 10px;
+      a {
+        display: inline-block !important;
+        float: unset !important;
+        height: 39px;
+        color: #3c3c3c;
+        line-height: 40px;
+        padding: 0 15px;
+        margin-right: 20px
+      }
+    }
+    .container-box__content {
+      &>.container {
+        width: 100%;
+        form {
+          width: 100% !important;
+          margin: 0 !important;
+          max-width: 360px !important;
+          padding-left: 15px;
+        }
+      }
+    }
+    #FF {
+      width: 100vw !important;
+    }
+  }
+  body {
+    background: #fff;
+    padding-top: 50px;
+    header {
+      height: auto;
+      background-color: #fff;
+      width: 100%;
+      margin: 0 !important;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      z-index: 999;
+      border-bottom: 1px solid #f1f1f1;
+      overflow: hidden;
+      .navbar {
+        background-color: #fff;
+        max-width: 1200px;
+        margin: 0 auto;
+        border: 0;
+        .container-fluid {
+          padding-left: 0;
+          padding-right: 0;
+        }
+        .form-group {
+          position: relative;
+          .icon {
+            display: inline-block;
+            position: absolute;
+            right: 10px;
+            top: 8px;
+            background: transparent;
+            border: 0;
+            padding: 0;
+            cursor: pointer;
+          }
+        }
+        &-brand {
+  color: #000 !important;
+  font-weight: bold;
+  padding: 0;
+  img {
+    height: 100%;
+    width: auto;
+    max-width: 200px;
+  }
+}
+        &-nav {
+          &>li>a {
+            color: #000 !important;
+            &.active {
+              color: #FFB722 !important;
+            }
+            &:hover {
+              color: #FFB722 !important;
+            }
+          }
+        }
+        &-ruzhu {
+          a {
+            padding: 7px 30px;
+            margin: 8px 0 8px 15px;
+            background:rgba(253,187,51,1);
+            border-radius: 4px;
+            color: #fff !important;
+            &:hover {
+              background-color: #FFB722 !important;
+            }
+          }
+        }
+        @media (min-width: 768px) {
+          &-ruzhu {
+            float: right;
+          }
+        }
+      }
+    }
+    .container {
+      &-box {
+        .nav {
+          padding-top: 20px;
+          height: auto;
+          padding-bottom: 10px;
+          font-size: 14px;
+          color: #9A9A9A;
+          a {
+            color: inherit;
+          }
+        }
+        &__content {
+          .hd {
+             min-height: 39px;
+            line-height: 40px;
+            border-bottom: 1px solid #32394d;
+            a {
+              display: inline;
+              float: left;
+              height: 39px;
+              color: #3c3c3c;
+              line-height: 40px;
+              padding: 0 15px;
+              margin-right: 20px;
+              &.active, &:hover {
+                color: #fff;
+                background-color: #32394d;
+                border-bottom: 1px solid #32394d
+              }
+            }
+          }
+          &--body {
+            .fd {
+              .count-box {
+                position: relative;
+                padding-bottom: 20px;
+              }
+            }
+          }
+        }
+      }
+      .ad {
+        margin-top: 20px;
+      }
+    }
+    .footer {
+      margin-top: 60px;
+      background:linear-gradient(180deg,rgba(24,29,32,1) 1%,rgba(29,33,35,1) 100%);
+      .container {
+        &-tip {
+          padding-bottom: 30px;
+          border-bottom: 1px solid #313639;
+          &__title {
+            margin-top: 42px;
+            text-align: center;
+            font-size: 14px;
+            color: #CFD4D7;
+          }
+          p {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #CFD4D7;
+            font-weight: 300;
+          }
+        }
+        &-link {
+          padding: 30px 0 40px 0;
+          border-bottom: 1px solid #313639;
+          span {
+            font-size: 16px;
+            color: #CFD4D7;
+          }
+          a {
+            font-size: 14px;
+            color: #CFD4D7;
+            margin-left: 29px;
+          }
+        }
+        &-banquan {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-top: 30px;
+          color: #CFD4D7;
+          font-size: 12px;
+          a {
+            color: inherit;
+            margin-right: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+.tool-nav a {
+  display: inline;
+  float: left;
+  height: 39px;
+  color: #3c3c3c;
+  line-height: 40px;
+  padding: 0 15px;
+  margin-right: 20px
+}
+
+.tool-nav a.active,.tool-nav a:hover {
+  color: #fff;
+  background: #32394d
+}
+
+.tool-wrap {
+  width: 900px
+}
+
+.tool-wrap .tool-nav a {
+  display: inline;
+  float: left;
+  height: 39px;
+  color: #3c3c3c;
+  line-height: 40px;
+  padding: 0 15px;
+  margin-right: 20px
+}
+
+.tool-wrap .tool-nav a.active,.tool-wrap .tool-nav a:hover {
+  color: #fff;
+  background: #32394d
+}
+
+.hd {
+  min-height: 39px;
+  line-height: 40px;
+  border-bottom: 1px solid #32394d
+}
+
+.tool-wrap .count-box {
+  position: relative;
+  padding-bottom: 20px
+}
+
+.tool-wrap .field-r-box {
+  width: 340px
+}
+
+.tool-wrap .form .text-field {
+  height: 16px;
+  line-height: 16px;
+  padding: 20px 42px 20px 15px;
+  border-color: #ddd
+}
+
+.tool-wrap .form .input-wd340 {
+  width: 281px
+}
+
+.tool-wrap .input-box {
+  position: relative
+}
+
+.tool-wrap .form .txt-r {
+  position: absolute;
+  right: 15px;
+  top: 0;
+  height: 42px;
+  line-height: 42px;
+  color: #999
+}
+
+.tool-wrap .form .text-label {
+  height: 42px;
+  width: 310px;
+  line-height: 42px;
+  margin-right: 15px
+}
+
+.tool-wrap .errmsg {
+  display: block;
+  position: absolute;
+  left: 326px;
+  bottom: -10px;
+  height: 26px;
+  line-height: 26px;
+  font-size: 13px;
+  color: #ec4444
+}
+
+.tool-wrap .slt-box {
+  width: 214px
+}
+
+.tool-wrap .ui-select {
+  width: 214px;
+  height: 42px
+}
+
+.tool-wrap .slt-wd340,.tool-wrap .slt-wd340 .ui-select {
+  width: 340px
+}
+
+.tool-wrap .ui-select .selected,.tool-wrap .ui-select .options {
+  font-size: 14px;
+  border-color: #ddd
+}
+
+.tool-wrap .ui-select .selected {
+  width: 167px;
+  padding: 0 30px 0 15px;
+  height: 40px;
+  line-height: 40px
+}
+
+.tool-wrap .slt-wd340 .ui-select .selected {
+  width: 293px
+}
+
+.tool-wrap .ui-select .options {
+  top: 42px;
+  width: 212px
+}
+
+.tool-wrap .slt-wd340 .ui-select .options {
+  width: 338px
+}
+
+.tool-wrap .ui-select .selected:after {
+  top: 16px
+}
+
+.tool-wrap .ui-select li {
+  padding: 0 15px
+}
+
+.tool-wrap .ui-select .selected i {
+  top: 17px
+}
+
+.tool-wrap .form .input-wd-s {
+  width: 67px;
+  padding: 12px 30px 12px 15px
+}
+
+.btn164 {
+  width: 164px;
+  height: 44px;
+  line-height: 44px;
+  font-size: 14px
+}
+
+.mr12 {
+  margin-right: 12px
+}
+
+.btn-bd-p,.btn-bd-p:visited,.btn-bd-p:active {
+  color: #32394d;
+  border: 1px solid #32394d
+}
+
+.btn-bd-p:hover {
+  color: #333;
+  background: #f7f8fa
+}
+
+.btn-bd164 {
+  width: 162px;
+  height: 42px;
+  line-height: 42px
+}
+
+.tool-wrap .btn-box {
+  width: 340px;
+  margin: 26px 0 0 325px
+}
+
+.tool-wrap .radio-box {
+  height: 20px;
+  margin-top: 10px
+}
+
+.tool-wrap .radio-box span {
+  margin-right: 30px
+}
+
+.tool-wrap .btn-primary:visited,.tool-wrap .btn-primary:active {
+  color: #fff
+}
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+  display: block
+}
+
+address,caption,cite,code,dfn,em,strong,i,th,var,optgroup {
+  font-style: normal;
+  font-weight: 400
+}
+
+h1,h2,h3,h4,h5,h6,abbr,acronym {
+  font-weight: 400
+}
+
+input,button,textarea,select,optgroup,option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit
+}
+
+input,button,textarea,select {
+  font-size: 100%
+}
+
+input[type=text],input[type=password],textarea {
+  outline-style: none;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0
+}
+
+textarea {
+  resize: none
+}
+
+ol,ul {
+  list-style: none
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+caption,th {
+  text-align: left
+}
+
+a,ins {
+  text-decoration: none
+}
+
+a {
+  outline: 0;
+  color: #333
+}
+
+a:hover {
+  color: #32394d;
+  cursor: pointer
+}
+
+blockquote,q {
+  quotes: none
+}
+
+:focus {
+  outline: 0
+}
+
+img {
+  border: 0;
+  max-width: 100%
+}
+
+blockquote:before,blockquote:after,q:before,q:after {
+  content: '';
+  content: none
+}
+
+@font-face {
+  font-family: dinschrift;
+  src: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/font/DINMittelschrift-Alternate_e5fbea1.eot);
+  src: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/font/DINMittelschrift-Alternate_187f07c.woff) format('woff'),url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/font/DINMittelschrift-Alternate_71a58a5.ttf) format('truetype'),url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/font/DINMittelschrift-Alternate_c55c38e.svg#DINMittelschrift-Alternate) format('svg'),url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/font/DINMittelschrift-Alternate_e5fbea1.eot?#iefix) format('embedded-opentype');
+  font-weight: 400;
+  font-style: normal
+}
+
+@font-face {
+  font-family: fdcfont-bold;
+  src: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/font/FDCfont-Bold-1_8750535.ttf);
+  font-style: normal
+}
+
+@font-face {
+  font-family: fdcfont-regular;
+  src: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/font/FDCfont-Regular-0_c3da3b9.ttf);
+  font-style: normal
+}
+
+body {
+  font: 14px/1.5 PingFang SC,Lantinghei SC,Helvetica Neue,Helvetica,Arial,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,STHeitiSC-Light,simsun,\\5B8B\4F53,WenQuanYi Zen Hei,WenQuanYi Micro Hei,sans-serif;
+  color: #333;
+  min-width: 1210px;
+  -webkit-font-smoothing: antialiased
+}
+
+.fl-right {
+  float: right
+}
+
+.fl-left {
+  float: left
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden
+}
+
+.clearfix {
+  zoom:1}
+
+.txt-center {
+  text-align: center
+}
+
+.italic {
+  font-style: italic
+}
+
+.block {
+  display: block
+}
+
+.hide {
+  display: none
+}
+
+.inline {
+  display: inline-block
+}
+
+.pos-relative {
+  position: relative
+}
+
+.pos-abs {
+  position: absolute
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto
+}
+
+.bg-white {
+  background-color: #fff
+}
+
+.bg-gray {
+  background-color: #f5f5f5
+}
+
+.grid-fluid {
+  width: 100%
+}
+
+.grid {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.mt35 {
+  margin-top: 35px
+}
+
+.grid-l {
+  float: left;
+  width: 900px;
+  padding-bottom: 60px
+}
+
+.grid-r {
+  float: right;
+  width: 280px;
+  padding-bottom: 60px
+}
+
+.mod {
+  margin-top: 35px
+}
+
+.com-pb {
+  padding-bottom: 50px
+}
+
+.more {
+  background: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/images/arrow_right_f63e886.png) no-repeat right center;
+  background-size: 7px 13px;
+  padding-right: 12px;
+  color: #333;
+  font-size: 14px
+}
+
+.more:hover {
+  color: #5690f5
+}
+
+.single {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis
+}
+
+.multi {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical
+}
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),only screen and (-moz-min-device-pixel-ratio:1.5),only screen and (-o-min-device-pixel-ratio:1.5),only screen and (min-device-pixel-ratio:1.5) {
+  .more {
+      background-image:url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/images/arrow_right_2x_84af45b.png)
+  }
+
+  .more:hover {
+  }
+}
+
+.info-link {
+  color: #3C7EE8;
+  cursor: pointer
+}
+
+.error-grid {
+  text-align: center;
+  margin-top: 55px
+}
+
+.error-grid .error-icon {
+  background: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/images/404_f30544d.jpg) no-repeat;
+  background-size: 180px 170px;
+  width: 180px;
+  height: 170px;
+  margin: 0 auto
+}
+
+.error-grid .error-desc {
+  margin-top: 36px;
+  font-size: 16px;
+  color: #222
+}
+
+.error-grid .error-btn {
+  margin-top: 42px;
+  margin-bottom: 42px
+}
+
+.error-grid .timer {
+  color: #518ff4
+}
+
+.error-grid .btn {
+  width: 158px;
+  height: 42px;
+  border: 1px solid #518ff4;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 42px
+}
+
+.error-grid .go-index {
+  color: #518ff4;
+  margin-left: 16px
+}
+
+.error-grid .guess {
+  margin-bottom: 94px
+}
+
+.error-grid .guess a {
+  margin-left: 18px
+}
+
+.notice {
+  margin-top: 60px;
+  margin-bottom: 115px;
+  font-family: PingFangSC-Regular
+}
+
+.notice .notice-nav {
+  float: left;
+  width: 23%;
+  font-size: 18px;
+  color: #333
+}
+
+.notice .notice-nav ul {
+  padding-top: 35px;
+  display: inline-block;
+  width: 185px;
+  box-shadow: 0 -5px 12px rgba(37,102,216,.14)
+}
+
+.notice .notice-nav ul li {
+  margin-bottom: 30px;
+  display: inline-block;
+  width: 100%;
+  text-align: center
+}
+
+.notice .notice-main {
+  float: left;
+  width: 77%;
+  font-size: 16px;
+  line-height: 30px;
+  color: #666
+}
+
+.notice .notice-main .main-title {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  margin-top: 15px;
+  color: #333
+}
+
+.notice .notice-main .main-subtitle {
+  color: #333;
+  font-weight: 500;
+  margin-top: 25px;
+  margin-bottom: 20px
+}
+
+.notice .notice-main .agreement {
+  float: right;
+  margin-right: 10px
+}
+
+.notice .notice-main .cate ul {
+  padding-left: 18px
+}
+
+.notice .notice-main .cate ul p {
+  padding-left: 10px
+}
+
+.notice .notice-main ul {
+  list-style: disc
+}
+
+.notice .active {
+  font-weight: 700;
+  background: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/images/slide_7933030.png) no-repeat left 50%
+}
+
+.notice .show {
+  display: block
+}
+
+.notice .hide {
+  display: none
+}
+
+@import url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/ui/button_3603ffe.css);@import url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/ui/select/select_bbeca95.css);@import url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/ui/toast/toast_bce9958.css);@import url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/ui/form_041bcd6.css); .btn {
+  color: #fff;
+  border-radius: 2px;
+  text-align: center;
+  cursor: pointer;
+  letter-spacing: 1px;
+  display: inline-block;
+  border: 0;
+  padding: 0
+}
+
+.btn:hover {
+  color: #fff
+}
+
+.btn-normal {
+  color: #6492e3;
+  background-color: #fff;
+  border: 1px solid #6492e3
+}
+
+.btn-primary {
+  background: #32394d
+}
+
+.btn-primary-v2 {
+  background: #32394d
+}
+
+.btn-primary-v2:active {
+  background: #1f222e
+}
+
+.btn-disabled {
+  background: #d9d9d9;
+  cursor: default;
+  color: #666
+}
+
+.btn-bigger {
+  width: 219px;
+  height: 44px;
+  line-height: 42px;
+  font-size: 16px
+}
+
+.btn-primary:hover {
+  background: #32394d
+}
+
+.btn-primary-v2:hover {
+  background: #1f222e
+}
+
+.btn-disabled:hover {
+  background: #d9d9d9;
+  color: #666
+}
+
+.btn-normal:hover {
+  color: #fff;
+  background: #5690f5
+}
+
+.btn-msgcode {
+  width: 97px;
+  line-height: 36px;
+  display: inline-block;
+  border-radius: 0;
+  font-size: 13px;
+  vertical-align: top
+}
+
+#nprogress {
+  pointer-events: none
+}
+
+#nprogress .bar {
+  background: #5690f5;
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px
+}
+
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #5690f5,0 0 5px #5690f5;
+  opacity: 1;
+  -webkit-transform: rotate(3deg) translate(0px,-4px);
+  -ms-transform: rotate(3deg) translate(0px,-4px);
+  transform: rotate(3deg) translate(0px,-4px)
+}
+
+#nprogress .spinner {
+  display: block;
+  position: fixed;
+  z-index: 1031;
+  top: 15px;
+  right: 15px
+}
+
+#nprogress .spinner-icon {
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+  border: solid 2px transparent;
+  border-top-color: #5690f5;
+  border-left-color: #5690f5;
+  border-radius: 50%;
+  -webkit-animation: nprogress-spinner 400ms linear infinite;
+  animation: nprogress-spinner 400ms linear infinite
+}
+
+.nprogress-custom-parent {
+  overflow: hidden;
+  position: relative
+}
+
+.nprogress-custom-parent #nprogress .spinner,.nprogress-custom-parent #nprogress .bar {
+  position: absolute
+}
+
+@-webkit-keyframes nprogress-spinner {
+  0% {
+      -webkit-transform: rotate(0deg)
+  }
+
+  100% {
+      -webkit-transform: rotate(360deg)
+  }
+}
+
+@keyframes nprogress-spinner {
+  0% {
+      transform: rotate(0deg)
+  }
+
+  100% {
+      transform: rotate(360deg)
+  }
+}
+
+.swiper-container {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  direction: ltr;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 1
+}
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  -webkit-transition-property: -webkit-transform,left,top;
+  -webkit-transition-duration: 0s;
+  -webkit-transform: translate3d(0px,0,0);
+  -webkit-transition-timing-function: ease;
+  -moz-transition-property: -moz-transform,left,top;
+  -moz-transition-duration: 0s;
+  -moz-transform: translate3d(0px,0,0);
+  -moz-transition-timing-function: ease;
+  -o-transition-property: -o-transform,left,top;
+  -o-transition-duration: 0s;
+  -o-transform: translate3d(0px,0,0);
+  -o-transition-timing-function: ease;
+  -o-transform: translate(0px,0);
+  -ms-transition-property: -ms-transform,left,top;
+  -ms-transition-duration: 0s;
+  -ms-transform: translate3d(0px,0,0);
+  -ms-transition-timing-function: ease;
+  transition-property: transform,left,top;
+  transition-duration: 0s;
+  transform: translate3d(0px,0,0);
+  transition-timing-function: ease;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box
+}
+
+.swiper-free-mode>.swiper-wrapper {
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -ms-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  margin: 0 auto
+}
+
+.swiper-slide {
+  float: left;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box
+}
+
+.swiper-wp8-horizontal {
+  -ms-touch-action: pan-y
+}
+
+.swiper-wp8-vertical {
+  -ms-touch-action: pan-x
+}
+
+.swiper-container {
+}
+
+.swiper-slide {
+}
+
+.swiper-slide-active {
+}
+
+.swiper-slide-visible {
+}
+
+.swiper-pagination-switch {
+}
+
+.swiper-active-switch {
+}
+
+.swiper-visible-switch {
+}
+
+.form {
+  color: #333;
+  font-size: 14px
+}
+
+.form .field {
+  margin-top: 26px;
+  position: relative
+}
+
+.form .text-label {
+  text-align: right;
+  width: 208px;
+  display: inline-block;
+  margin-right: 10px
+}
+
+.form .text-field {
+  border: 1px solid #ccc;
+  padding: 7px 8px;
+  background: #fff;
+  width: 221px;
+  margin: 0;
+  line-height: 20px;
+  height: 20px
+}
+
+.form .text-field.unit {
+  padding-right: 25px;
+  width: 204px
+}
+
+.form .text-field.double {
+  padding-right: 38px;
+  width: 191px
+}
+
+.form .text-field:focus {
+  border: 1px solid #518ff4
+}
+
+.form .msgcode {
+  width: 81px;
+  margin-right: 6px
+}
+
+.form .highlight {
+  color: #ec4444
+}
+
+.form .unit {
+  right: 8px;
+  top: -1px
+}
+
+.form .errmsg {
+  display: block;
+  left: 222px;
+  position: absolute;
+  top: 36px;
+  font-size: 13px;
+  color: #ec4444
+}
+
+.form .radio {
+  background-color: transparent;
+  background-image: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/ui/images/radio_1c18438.png);
+  background-size: 14px;
+  border: 0;
+  width: 14px;
+  height: 14px
+}
+
+.form .radio.checked {
+  background-image: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/ui/images/radio_check_0f3d0f4.png)
+}
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),only screen and (-moz-min-device-pixel-ratio:1.5),only screen and (-o-min-device-pixel-ratio:1.5),only screen and (min-device-pixel-ratio:1.5) {
+  .form .radio {
+      background-image:url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/ui/images/radio_2x_2aab00f.png)
+  }
+
+  .form .radio.checked {
+      background-image: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/ui/images/radio_check_2x_8514af8.png)
+  }
+}
+
+.native-select {
+  width: 0!important;
+  border: 0!important;
+  height: 0!important;
+  position: absolute;
+  visibility: hidden
+}
+
+.ui-select {
+  position: relative;
+  color: #8e949a;
+  cursor: pointer;
+  display: inline-block;
+  width: 239px;
+  line-height: 34px;
+  background-color: #fff;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+
+.ui-select .selected,.ui-select .options {
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #333
+}
+
+.ui-select .selected {
+  padding: 0 8px;
+  width: 201px;
+  height: 34px;
+  position: relative
+}
+
+.ui-select .selected span {
+  color: #333!important
+}
+
+.ui-select .selected i {
+  position: absolute;
+  background: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/ui/select/images/arrow_a21a0d4.png) left center;
+  background-size: 12px 6px;
+  width: 12px;
+  height: 6px;
+  right: 10px;
+  top: 13px;
+  -webkit-transition: -webkit-transform .2s ease-in;
+  -moz-transition: -moz-transform .2s ease-in;
+  -o-transition: -o-transform .2s ease-in;
+  transition: transform .2s ease-in
+}
+
+.ui-select .rotate {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg)
+}
+
+.ui-select .options {
+  background: #FFF;
+  position: absolute;
+  top: 35px;
+  z-index: 1;
+  margin: 0;
+  padding-left: 0;
+  width: 217px
+}
+
+.ui-select .limit {
+  height: 221px;
+  overflow-y: scroll
+}
+
+.ui-select li {
+  list-style: none;
+  transition: background .2s;
+  height: 34px;
+  padding: 0 8px
+}
+
+.ui-select li:hover,.ui-select li.current {
+  background: #f5f5f5
+}
+
+.ui-select .other {
+  position: absolute;
+  top: 36px;
+  border: 1px solid #ccc;
+  padding: 7px 8px;
+  background: transparent;
+  width: 201px
+}
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),only screen and (-moz-min-device-pixel-ratio:1.5),only screen and (-o-min-device-pixel-ratio:1.5),only screen and (min-device-pixel-ratio:1.5) {
+  .ui-select .selected i {
+      background-image:url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/ui/select/images/arrow_2x_adeed32.png)
+  }
+}
+
+.ui-text-box {
+  display: inline-block;
+  height: 18px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  margin-left: 10px
+}
+
+.ui-text-box-white {
+  color: #FFF;
+  border: 1px solid #a1c1f9;
+  position: relative;
+  top: -2px
+}
+
+.ui-text-box-red {
+  color: #fb6360;
+  border: 1px solid #fb6360
+}
+
+.ui-text-box-blue {
+  color: #518ff4;
+  border: 1px solid #b4cffa
+}
+
+.ui-text-box-allred {
+  color: #fff;
+  border-color: #FA5555;
+  background-color: #FA5555
+}
+
+.toast {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  line-height: 30px;
+  min-height: 30px;
+  padding: 0 9px;
+  display: none
+}
+
+.toast .content {
+  width: auto
+}
+
+.toast .arrow {
+  width: 9px;
+  height: 9px;
+  background: #fff;
+  position: absolute;
+  border: 1px solid #e5e5e5;
+  border-right: 0;
+  border-bottom: 0
+}
+
+.toast .up {
+  transform: rotate(45deg);
+  top: -6px
+}
+
+.toast .down {
+  transform: rotate(-135deg);
+  bottom: -6px
+}
+
+a img {
+  border: 0
+}
+
+.jr-head {
+  width: 100%;
+  height: 397px
+}
+
+.jr-banner {
+  width: 100%;
+  height: 397px;
+  position: relative
+}
+
+.jr-banner .bg-list {
+  width: 100%;
+  height: 397px
+}
+
+.jr-banner .bg-list .bg-item {
+  position: absolute;
+  opacity: 0;
+  height: 397px;
+  width: 100%;
+  z-index: 1;
+  background-position: center center;
+  background-size: auto 100%;
+  background-repeat: no-repeat
+}
+
+.jr-banner .banner-list {
+  width: 678px;
+  height: 373px;
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  margin-left: -347px;
+  overflow: hidden
+}
+
+.jr-banner .banner-list .banner-item {
+  width: 100%;
+  position: absolute;
+  margin-left: -678px;
+  z-index: 4
+}
+
+.jr-banner .banner-trigger {
+  width: 678px;
+  height: 373px;
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  margin-left: -350px;
+  text-align: center
+}
+
+.jr-banner .banner-trigger {
+  width: 680px;
+  height: 12px;
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  margin-left: -340px;
+  text-align: center;
+  z-index: 7
+}
+
+.jr-banner .banner-trigger .trigger {
+  display: inline-block;
+  margin: 0 4px
+}
+
+.jr-banner .banner-trigger .trigger a {
+  display: inline-block;
+  background-color: transparent;
+  width: 12px;
+  height: 12px;
+  background-image: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/widget/banner/images/s_ef5c843.png);
+  background-size: 100%;
+  background-position: center
+}
+
+.jr-banner .banner-trigger .curren a {
+  background-color: transparent;
+  background-image: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/widget/banner/images/m_976ce44.png)
+}
+
+.header {
+  height: 30px;
+  height: 31px\9;
+  background: #2a2932;
+  overflow: visible;
+  font-weight: 200
+}
+
+.header .wrapper {
+  height: 30px;
+  font-size: 14px;
+  color: #FFF;
+  line-height: 30px
+}
+
+.op-6 {
+  opacity: .7
+}
+
+.header a {
+  color: #FFF;
+  display: inline-block;
+  line-height: 30px
+}
+
+.header .hover:hover {
+  opacity: 1
+}
+
+.header span {
+  color: #FFF;
+  display: inline-block;
+  line-height: 30px
+}
+
+.header .h-left {
+  float: left
+}
+
+.header .h-right {
+  float: right
+}
+
+.header .login {
+  cursor: pointer
+}
+
+.header .line {
+  padding: 0 13px;
+  position: relative
+}
+
+.header .line:after {
+  content: ' ';
+  display: block;
+  height: 12px;
+  width: 1px;
+  background-color: #FFF;
+  position: absolute;
+  right: 0;
+  top: 9px;
+  opacity: .333
+}
+
+.header .mr {
+  padding-left: 13px
+}
+
+.login-module {
+  background-color: #fff;
+  height: 32px;
+  line-height: 34px;
+  color: #666;
+  font-size: 14px;
+  text-align: right;
+  right: 0;
+  top: 50%;
+  margin-top: -16px
+}
+
+.login-module .favorite {
+  background: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/widget/login/images/icon-favorite_bc8a2ca.png) no-repeat left 9px;
+  padding-left: 20px
+}
+
+.login-module .line:after {
+  content: "|";
+  margin: 0 8px
+}
+
+.login-module .space {
+  margin-left: 28px
+}
+
+.login-module span {
+  cursor: pointer
+}
+
+.slideContent {
+  margin: 0 auto
+}
+
+.slide-img-list {
+  position: absolute;
+  overflow: hidden
+}
+
+.slide-img-list SPAN {
+  position: absolute;
+  width: 19999px;
+  display: block
+}
+
+.slide-tab-btns {
+  z-index: 10;
+  position: absolute
+}
+
+.slide-tab-btns B {
+  position: absolute;
+  width: 100px;
+  display: block;
+  height: 14px;
+  overflow: hidden;
+  left: 50%
+}
+
+.slide-tab-btns B I {
+  width: 6px;
+  float: left;
+  height: 6px;
+  font-size: 0;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 0 9px;
+  border: #fff 2px solid;
+  background: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/widget/slide/images/tabRadio_b85fa8a.png) 0 10px\9;
+  border: 0\9;
+  height: 10px\9;
+  width: 10px\9;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px
+}
+
+.slide-tab-btns B I:hover {
+  background: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/widget/slide/images/tabRadio_b85fa8a.png)\9;
+  background-color: #fff;
+  background-color: transparent\9
+}
+
+.slide-tab-btns B I.on {
+  background-color: #fff;
+  background: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/widget/slide/images/tabRadio_b85fa8a.png)\9;
+  cursor: default;
+  background-color: transparent\9
+}
+
+.slide-tab-btns S {
+  position: absolute;
+  width: 45px;
+  display: none;
+  height: 70px;
+  overflow: hidden;
+  top: 130px;
+  cursor: pointer;
+  zoom:1}
+
+.slide-tab-btns S I {
+  position: absolute;
+  width: 45px;
+  background: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/widget/slide/images/bannerTab_f77113b.png);
+  background: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/widget/slide/images/btn_show_a31a3cd.png)\9;
+  background-size: 100% 100%;
+  height: 140px;
+  zoom:1}
+
+.slide-tab-btns S.prev {
+  left: 366px
+}
+
+.slide-tab-btns S.prev I {
+  top: -70px;
+  zoom:1}
+
+.slide-tab-btns S.next {
+  right: 366px;
+  zoom:1}
+
+.city-panel-label {
+  border: 1px solid #e6e6e6;
+  line-height: 14px;
+  text-align: center;
+  margin-top: 31px;
+  margin-left: 10px;
+  display: inline-block;
+  background: #fff;
+  position: relative;
+  z-index: 10001;
+  padding: 3px 23px 3px 7px;
+  cursor: pointer;
+  font-size: 12px
+}
+
+.city-panel-label:after {
+  width: 9px;
+  height: 5px;
+  position: absolute;
+  background: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/widget/cityPanel/img/arrow-up_deb85ea.png) no-repeat left center;
+  content: '';
+  top: 7px;
+  right: 8px
+}
+
+.city-panel-label.default {
+  background: #f5f5f5;
+  border-color: #f5f5f5;
+  color: #666
+}
+
+.city-panel-label.default:after {
+  background: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/widget/cityPanel/img/arrow-down_3669ee8.png) no-repeat left center;
+  top: 8px
+}
+
+.city-panel {
+  width: 432px;
+  border: 1px solid #e6e6e6;
+  padding: 14px 0;
+  color: #333;
+  font-size: 13px;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 9999;
+  background: #fff
+}
+
+.city-panel .tips {
+  color: #999;
+  padding-left: 18px;
+  line-height: 18px
+}
+
+.city-panel .tab {
+  margin-top: 4px;
+  border-bottom: 1px solid #ccc;
+  line-height: 33px
+}
+
+.city-panel .tab span {
+  display: inline-block;
+  width: 47px;
+  text-align: center;
+  position: relative;
+  margin: 0 7px;
+  cursor: pointer
+}
+
+.city-panel .tab .hot {
+  width: 55px;
+  text-align: right;
+  margin: 0 17px
+}
+
+.city-panel .tab .current {
+  color: #518ff4
+}
+
+.city-panel .tab .current:after {
+  width: 100%;
+  content: '';
+  border-bottom: 2px solid #518ff4;
+  position: absolute;
+  top: 32px;
+  left: 0
+}
+
+.city-panel .content {
+  padding-top: 9px;
+  line-height: 26px
+}
+
+.city-panel .content .letter {
+  width: 42px;
+  height: 30px;
+  text-align: center;
+  display: inline-block
+}
+
+.city-panel .content .short {
+  width: 28px
+}
+
+.city-panel .content .city {
+  width: 390px
+}
+
+.city-panel .content span {
+  width: 78px;
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden
+}
+
+.city-panel .content span i {
+  cursor: pointer
+}
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),only screen and (-moz-min-device-pixel-ratio:1.5),only screen and (-o-min-device-pixel-ratio:1.5),only screen and (min-device-pixel-ratio:1.5) {
+  .city-panel-label:after {
+      background-image:url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/widget/cityPanel/img/arrow-up-2x_7d789e0.png);
+      background-size: 9px
+  }
+
+  .city-panel-label.default:after {
+      background-image: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/widget/cityPanel/img/arrow-down-2x_34fb4fa.png);
+      background-size: 9px
+  }
+}
+
+.home-footer {
+  background: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/widget/footer/images/footer_6af9856.png) no-repeat;
+  background-size: cover;
+  font-size: 13px;
+  width: 100%;
+  min-width: 1200px;
+  position: relative;
+  color: #fff
+}
+
+.home-footer.fixed {
+  position: fixed;
+  bottom: 0
+}
+
+.home-footer .home-hot-city {
+  padding-top: 40px;
+  padding-bottom: 30px
+}
+
+.home-footer .home-friendly-link {
+  padding-bottom: 50px
+}
+
+.home-footer .home-law-link {
+  padding: 40px 0 66px;
+  border-top: 1px solid rgba(104,104,109,.7)
+}
+
+.home-footer .home-law-link .home-footer-title {
+  font-family: PingFangSC-Regular;
+  font-size: 16px;
+  color: #999;
+  letter-spacing: 0
+}
+
+.home-footer .home-law-link .home-footer-list {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #999;
+  letter-spacing: 0
+}
+
+.home-footer .home-hot-city,.home-footer .home-friendly-link,.home-footer .home-law-link {
+  word-wrap: break-word
+}
+
+.home-footer .home-hot-city span,.home-footer .home-friendly-link span,.home-footer .home-law-link span {
+  min-width: 80px;
+  display: inline-block;
+  height: 32px
+}
+
+.home-footer .home-copyright {
+  position: absolute;
+  color: #999;
+  text-align: center;
+  left: 50%;
+  margin-left: -139px;
+  bottom: 16px
+}
+
+.home-footer .home-copyright a {
+  color: #999
+}
+
+.home-footer .home-footer-list {
+  padding-left: 94px;
+  padding-top: 1px;
+  margin-bottom: 5px
+}
+
+.home-footer .home-footer-title {
+  font-size: 16px
+}
+
+.home-footer a {
+  color: #fff
+}
+
+.home-footer a:hover {
+  color: #fff
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100000
+}
+
+.modal .bg {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: .9
+}
+
+.modal .content {
+  background-color: #FFF;
+  width: 900px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -475px;
+  -webkit-transform: translate(0,-50%);
+  -moz-transform: translate(0,-50%);
+  -ms-transform: translate(0,-50%);
+  -o-transform: translate(0,-50%);
+  transform: translate(0,-50%)
+}
+
+.modal .content .mal-head {
+  height: 50px
+}
+
+.modal .content .mal-close {
+  width: 40px;
+  height: 40px;
+  float: right;
+  margin-top: 20px;
+  margin-right: -30px;
+  cursor: pointer;
+  background-image: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/widget/modal/images/cl_285d43c.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 22px 22px
+}
+
+.nav {
+  height: 60px
+}
+
+.nav .logo {
+  background-image: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/images/logo_c3227b8.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+  width: 114px;
+  height: 100%;
+  display: inline-block
+}
+
+.nav .city-info {
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #000;
+  background-image: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/widget/navigation/images/location_4c90df3.png);
+  background-repeat: no-repeat;
+  background-size: 13px auto;
+  background-position: left center;
+  padding-left: 20px;
+  margin-top: 15px;
+  margin-left: 25px;
+  padding-right: 20px;
+  cursor: pointer
+}
+
+.nav .nav-menu a {
+  display: inline-block;
+  height: 56px;
+  line-height: 56px;
+  font-size: 16px;
+  color: #000;
+  margin-left: 50px;
+  text-align: center
+}
+
+.nav .nav-menu a:hover {
+  font-weight: 600
+}
+
+.nav .nav-menu .active {
+  border-bottom: 4px solid #000;
+  font-weight: 600
+}
+
+.nav-line {
+  height: 1px;
+  background-color: #F0F2F7
+}
+
+.banner-wraper {
+  background-image: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/widget/new-banner/images/bg_2683b42.png);
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-size: 2px auto
+}
+
+.banner-wraper .swiper-container {
+  width: 1200px;
+  height: 314px
+}
+
+.banner-wraper .swiper-container .swiper-wrapper {
+  width: 100%
+}
+
+.banner-wraper .swiper-container .swiper-wrapper img {
+  width: 100%
+}
+
+.banner-wraper .swiper-container .slide-item {
+  overflow: hidden
+}
+
+.banner-wraper .swiper-container img {
+  width: 100%
+}
+
+.banner-wraper .swiper-container .arrow {
+  display: none;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0,0,0,.4);
+  background-repeat: no-repeat;
+  background-size: 8px 14px;
+  background-position: center center;
+  position: absolute;
+  top: 137px
+}
+
+.banner-wraper .swiper-container .arrow-left {
+  background-image: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/widget/new-banner/images/left_7a4c477.png);
+  left: 0
+}
+
+.banner-wraper .swiper-container .arrow-right {
+  background-image: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/widget/new-banner/images/right_2f7e65b.png);
+  right: 320px
+}
+
+.banner-wraper .swiper-container .my-pagination {
+  width: 1024px;
+  position: absolute;
+  z-index: 20;
+  bottom: 10px;
+  text-align: center
+}
+
+.banner-wraper .swiper-container .swiper-pagination-switch {
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  background: #FFF;
+  margin: 0 5px;
+  cursor: pointer;
+  opacity: .5
+}
+
+.banner-wraper .swiper-container .swiper-active-switch {
+  background: #fff;
+  width: 30px;
+  height: 4px;
+  opacity: 1
+}
+
+.banner-wraper .info {
+  width: 240px;
+  height: 220px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #FFF;
+  padding: 25px 30px 30px
+}
+
+.banner-wraper .info .person-info {
+  position: relative;
+  padding-bottom: 20px;
+  background-image: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/widget/new-banner/images/line_512b523.png);
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  background-position: center bottom
+}
+
+.banner-wraper .info .cont-left {
+  position: absolute;
+  top: 0;
+  left: 0
+}
+
+.banner-wraper .info .icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 45px;
+  overflow: hidden
+}
+
+.banner-wraper .info .icon-df {
+  background-image: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/widget/new-banner/images/df_d6d9679.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center
+}
+
+.banner-wraper .info .ml-65 {
+  margin-left: 65px
+}
+
+.banner-wraper .info .ml-80 {
+  margin-left: 80px
+}
+
+.banner-wraper .info .login-name {
+  height: 50px;
+  line-height: 45px;
+  font-size: 16px;
+  color: #000
+}
+
+.banner-wraper .info .desc {
+  font-size: 16px;
+  color: #000;
+  line-height: 25px
+}
+
+.banner-wraper .info .sub-desc {
+  font-size: 14px;
+  color: #333;
+  line-height: 25px
+}
+
+.banner-wraper .info .loan-info {
+  margin-top: 15px
+}
+
+.banner-wraper .info .item {
+  line-height: 24px;
+  position: relative
+}
+
+.banner-wraper .info .item-title {
+  font-size: 14px;
+  color: #666
+}
+
+.banner-wraper .info .item-info {
+  font-size: 14px;
+  color: #333
+}
+
+.banner-wraper .info .check {
+  width: 238px;
+  height: 38px;
+  background-color: #a78754;
+  border-radius: 38px;
+  margin: 10px auto 0;
+  line-height: 38px;
+  font-size: 14px;
+  color: #FFF;
+  cursor: pointer;
+  user-select: none
+}
+
+.banner-wraper .info .check:hover {
+  background-color: #96794b
+}
+
+.banner-wraper .info .c-p {
+  cursor: pointer
+}
+
+.banner-wraper .desc-info {
+  height: 55px;
+  background-color: #2d2d2d;
+  padding: 29px 40px;
+  margin: 0 auto;
+  -webkit-transform: translate(0,42px);
+  -moz-transform: translate(0,42px);
+  -ms-transform: translate(0,42px);
+  -o-transform: translate(0,42px);
+  transform: translate(0,42px);
+  -webkit-transition: transform 1s;
+  -moz-transition: transform 1s;
+  -o-transition: transform 1s;
+  transition: transform 1s
+}
+
+.banner-wraper .desc-info .item {
+  float: left;
+  position: relative;
+  width: 265px
+}
+
+.banner-wraper .desc-info .mr-46 {
+  margin-right: 46px
+}
+
+.banner-wraper .desc-info .item-left {
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-position: center center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat
+}
+
+.banner-wraper .desc-info .item-right {
+  margin-left: 75px
+}
+
+.banner-wraper .desc-info .zx {
+  background-image: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/widget/new-banner/images/zx_b87b5a3.png)
+}
+
+.banner-wraper .desc-info .hg {
+  background-image: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/widget/new-banner/images/hg_6ebacd1.png)
+}
+
+.banner-wraper .desc-info .kj {
+  background-image: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/widget/new-banner/images/kj_0601b52.png)
+}
+
+.banner-wraper .desc-info .bz {
+  background-image: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/widget/new-banner/images/bz_4649682.png)
+}
+
+.banner-wraper .desc-info .item-title {
+  font-size: 16px;
+  color: #FFF;
+  line-height: 21px
+}
+
+.banner-wraper .desc-info .item-desc {
+  font-size: 14px;
+  color: #FFF;
+  line-height: 18px;
+  opacity: .5;
+  margin-top: 5px
+}
+
+.banner-wraper .desc-animation {
+  -webkit-transform: translate(0,0);
+  -moz-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  -o-transform: translate(0,0);
+  transform: translate(0,0)
+}
+
+.pager-seo {
+  display: none
+}
+
+.page-container {
+  margin: 20px 0;
+  line-height: 20px;
+  text-align: center
+}
+
+.page-container a,.page-container span {
+  display: inline-block;
+  *display: inline;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #666
+}
+
+.page-container a.prev,.page-container span.prev,.page-container a.next,.page-container span.next {
+  width: 80px
+}
+
+.page-container li {
+  display: inline-block;
+  *display: inline;
+  border: 1px solid #e5e5e5;
+  vertical-align: middle;
+  margin-right: 15px;
+  width: auto
+}
+
+.page-container li.more {
+  border: 0
+}
+
+.page-container li:hover,.page-container li.active {
+  background-color: #f5f5f5
+}
+
+.login-qrcode {
+  position: absolute;
+  width: auto;
+  height: 225px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  bottom: -265px;
+  right: 0;
+  z-index: 100;
+  border: 1px solid #ccc;
+  display: none
+}
+
+.login-qrcode-box {
+  position: relative;
+  z-index: 1000
+}
+
+.login-qrcode-wrapper {
+  width: 165px;
+  text-align: center;
+  float: left
+}
+
+.login-qrcode img {
+  width: 161px;
+  height: 161px
+}
+
+.login-qrcode:after {
+  content: '';
+  position: absolute;
+  right: 22px;
+  top: -8px;
+  width: 14px;
+  height: 8px;
+  visibility: visible;
+  background: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/images/login-qrcode-arrow_547122a.png) no-repeat center center
+}
+
+.login-qrcode-desc {
+  text-align: center;
+  font-size: 15px;
+  color: #000
+}
+
+.query-city-select {
+  display: none
+}
+
+.query-city-select .box {
+  width: 306px;
+  height: 316px;
+  font-size: 14px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 10011;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  margin-top: -158px;
+  margin-left: -153px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px
+}
+
+.query-city-select .box .close-btn {
+  color: #666;
+  position: absolute;
+  font-size: 26px;
+  top: 5px;
+  right: 18px;
+  cursor: pointer;
+  font-weight: lighter
+}
+
+.query-city-select .box .title {
+  font-size: 20px;
+  margin-top: 46px;
+  margin-bottom: 5px
+}
+
+.query-city-select .box .sub-title {
+  margin-bottom: 21px;
+  color: #999
+}
+
+.query-city-select .box .button {
+  width: 190px;
+  height: 36px;
+  line-height: 36px;
+  border: 1px solid #e6e6e6;
+  margin: 0 auto;
+  margin-top: 15px;
+  cursor: pointer;
+  color: #666;
+  position: relative
+}
+
+.query-city-select .box .location-icon {
+  width: 11px;
+  height: 17px;
+  background: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/images/location_9790514.png) no-repeat;
+  background-size: contain;
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: middle
+}
+
+.query-city-select .box .button:hover {
+  background-color: #5690f5;
+  color: #fff;
+  border-color: #5690f5
+}
+
+.query-city-select .box .button:hover .location-icon {
+  background-image: url(//huoke-cdn-source.duxiaoman.com/v/static/mall/common/images/location_hover_edde93e.png)
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: .5;
+  filter: alpha(opacity=50);
+  z-index: 10010
+}
